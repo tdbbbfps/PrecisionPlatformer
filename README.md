@@ -11,7 +11,7 @@ Press Esc to open pause menu in game.
 ```
 [Itch.io](https://tdbbbfps.itch.io/)
 Platformer character script sample
-```gdscript
+```gdscript=
 extends CharacterBody2D
 class_name Player
 
@@ -201,6 +201,8 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 
 ~~Under deveplopment~~
 
+- [ ] for unchecked checkbox
+- [x] for checked checkbox
 
 > 1
 > > One
