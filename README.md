@@ -1,6 +1,6 @@
 # PrecisionPlatformer
 
-'''
+```
 **Instruction**
 Press A, D to move left and right.
 Press Spacebar to jump.
