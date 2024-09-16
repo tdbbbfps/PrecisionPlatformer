@@ -26,7 +26,7 @@ Press Esc to open pause menu in game.
 [![Level3 Testrun]](https://www.youtube.com/watch?v=QmkTWnSwevY)
 ![ScreenShot](ScreenShot.png)
 
-
+Platformer character script sample
 ```gdscript
 extends CharacterBody2D
 class_name Player
@@ -71,8 +71,6 @@ func run():
 	if (velocity.x != 0 and fsm.current_state.can_transition):
 		fsm.change_state("run")
 		
-		
-##FIXME While pressing both right and left key will make sprite keep fliping.
 func sprite_flip():
 	if (Input.is_action_pressed("Right") and anisprite.flip_h == true):
 		anisprite.flip_h = false
@@ -91,13 +89,9 @@ func _input(event):
 		
 @onready var coyote_jump_timer: Timer = $CoyoteJumpTimer
 var can_jump : bool = false
-# Handle jump on the ground, in these scripts, player can only jump while is on the ground.
 func handle_jump():
-	# Player is able to jump while is on floor.
 	if (is_on_floor() and not can_jump):
 		can_jump = true
-	##FIXME Fix this to make it able to touch gem to jump again
-	# If the player leaves the floor, start a short timer. Once the timer runs out, set 'can_jump' to false.
 	elif (not is_on_floor() and can_jump and coyote_jump_timer.is_stopped()):
 		coyote_jump_timer.start()
 
@@ -147,11 +141,7 @@ func dash_reset():
 	elif (is_on_wall_only() and not can_dash):
 		can_dash = true
 
-
-##TODO make player can climb up while pressing up key
 var is_climbing : bool = false
-# 如果玩家在地板上且靠在牆上，不會觸發攀爬，但是當玩家按下跳躍鍵離開地面就會立刻觸發，導致跳躍可能會
-# 使玩家直接飛起來
 func climb():
 	var input = Input.get_axis("Left", "Right")
 	if (is_on_wall_only() and not is_on_floor()):
@@ -171,8 +161,6 @@ func climb():
 			is_climbing = false
 	elif (not is_on_wall() and is_climbing):
 		is_climbing = false
-	#climb_up()
-	#climb_down()		
 		
 func climb_up():
 	if (is_climbing and Input.is_action_pressed("Up")):
@@ -191,7 +179,6 @@ func frame_freeze(time_scale, duration):
 
 func _on_ghosteffect_timer_timeout() -> void:
 	ghost_effect()
-	# 如果殘影特效時間小於0.25則重複觸發 反之則停止並清除計數
 	if (ghost_time < 0.25):
 		ghosteffect_timer.start()
 	elif (ghost_time >= 0.25):
@@ -221,7 +208,7 @@ func die():
 	collision.disabled = true
 	
 	await scene_transition.aniplayer.animation_finished
-	#Spwan in spawn point
+
 	position = spawn_point
 	collision.disabled = false
 	scene_transition.Extend()
