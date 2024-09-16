@@ -1,5 +1,6 @@
 # PrecisionPlatformer
-## Weird
+## 2
+### 3
 
 ```
 Instruction
@@ -9,25 +10,6 @@ Press Shift to dash.
 Press Esc to open pause menu in game.
 ```
 [Itch.io](https://tdbbbfps.itch.io/)
-
-**Under deveplopment**
-
-*Under deveplopment*
-
-~~Under deveplopment~~
-
-
-> 1
-> > One
-
-> > Two
-
-> 2
-> > One
-
-[![Level3 Testrun]](https://www.youtube.com/watch?v=QmkTWnSwevY)
-![ScreenShot](ScreenShot.png)
-
 Platformer character script sample
 ```gdscript
 extends CharacterBody2D
@@ -212,3 +194,22 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 	if (body.is_in_group("Trap")):
 		die()
 ```
+
+**Under deveplopment**
+
+*Under deveplopment*
+
+~~Under deveplopment~~
+
+
+> 1
+> > One
+
+> > Two
+
+> 2
+> > One
+
+[![Level3 Testrun]](https://www.youtube.com/watch?v=QmkTWnSwevY)
+![ScreenShot](ScreenShot.png)
+
