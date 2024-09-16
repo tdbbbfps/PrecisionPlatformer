@@ -12,11 +12,13 @@ Press Esc to open pause menu in game.
 ```
 
 **Under deveplopment**
+*Under deveplopment*
+~~Under deveplopment~~
 
 > 1
 > > One
+
 > > Two
 
 > 2
 > > One
-> > Two
