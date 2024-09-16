@@ -1,3 +1,6 @@
-'# This is Title
-'''## wtf
-Itch.io(https://tdbbbfps.itch.io/)
+'# PrecisionPlatformer'
+
+''' ### Instruction 
+Press keyboard A, D to move left and right.
+
+'''
