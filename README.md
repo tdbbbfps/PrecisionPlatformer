@@ -23,4 +23,4 @@ Press Esc to open pause menu in game.
 > 2
 > > One
 
-[ScreenShot.png]
+(ScreenShot.png)
