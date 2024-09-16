@@ -161,15 +161,7 @@ func climb():
 			is_climbing = false
 	elif (not is_on_wall() and is_climbing):
 		is_climbing = false
-		
-func climb_up():
-	if (is_climbing and Input.is_action_pressed("Up")):
-		velocity.y -= 5.0
-		
-func climb_down():
-	if (is_climbing and Input.is_action_pressed("Up")):
-		velocity.y += 5.0
-		
+
 func frame_freeze(time_scale, duration):
 	Engine.time_scale = time_scale
 	await get_tree().create_timer(duration * time_scale).timeout
